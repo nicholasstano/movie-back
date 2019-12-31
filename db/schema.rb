@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_13_161218) do
+ActiveRecord::Schema.define(version: 2019_12_31_193217) do
+
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.text "notes"
+    t.string "month_day_played"
+    t.string "year_played"
+    t.string "year"
+    t.string "image"
+    t.string "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string "name"
