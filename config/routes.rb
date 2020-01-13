@@ -9,6 +9,7 @@ Rails.application.routes.draw do
      resources :boards
      resources :albums
      resources :videos
+     resources :tvshows
     end 
   end 
   root to: 'home#index'

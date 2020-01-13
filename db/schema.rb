@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_11_224446) do
+ActiveRecord::Schema.define(version: 2020_01_13_152922) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(version: 2020_01_11_224446) do
     t.string "rating"
     t.string "image"
     t.string "year_watched"
+  end
+
+  create_table "tvshows", force: :cascade do |t|
+    t.string "name"
+    t.string "season"
+    t.text "notes"
+    t.string "month_day_watched"
+    t.string "year_watched"
+    t.string "year"
+    t.string "image"
+    t.string "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "videos", force: :cascade do |t|
