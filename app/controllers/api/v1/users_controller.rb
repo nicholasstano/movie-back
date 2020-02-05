@@ -5,7 +5,11 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-        user = User.create(user_params)
-        render json: user
+        user = User.new(username: params[:username], password: params[:password])
+        if user.save
+          render json: user
+        else
+          render json: {errors: user.errors.full_messages}
+        end
     end
 end
