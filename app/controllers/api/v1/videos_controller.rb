@@ -22,7 +22,7 @@ class Api::V1::VideosController < ApplicationController
 
     private 
     def video_params
-        params.require(:video).permit(:id, :name, :notes, :month_day_played, :year_played, :year, :image, :rating)
+        params.require(:video).permit(:id, :name, :notes, :month_day_played, :year_played, :year, :image, :rating, :improve_notes)
     end
 
 end

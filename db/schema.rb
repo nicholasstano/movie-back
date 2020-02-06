@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_27_153245) do
+ActiveRecord::Schema.define(version: 2020_02_06_025822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_153245) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "improve_notes"
   end
 
   create_table "boards", force: :cascade do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_153245) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "improve_notes"
   end
 
   create_table "books", force: :cascade do |t|
@@ -51,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_153245) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "improve_notes"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -64,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_153245) do
     t.string "rating"
     t.string "image"
     t.string "year_watched"
+    t.string "improve_notes"
   end
 
   create_table "tvshows", force: :cascade do |t|
@@ -75,6 +79,14 @@ ActiveRecord::Schema.define(version: 2020_01_27_153245) do
     t.string "year"
     t.string "image"
     t.string "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "improve_notes"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -89,6 +101,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_153245) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "improve_notes"
   end
 
 end

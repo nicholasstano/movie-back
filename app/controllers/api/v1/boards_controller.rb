@@ -22,7 +22,7 @@ class Api::V1::BoardsController < ApplicationController
     private
     
     def board_params
-        params.require(:board).permit(:id, :image, :year_played, :month_day_played, :name, :notes, :year, :rating)
+        params.require(:board).permit(:id, :image, :year_played, :month_day_played, :name, :notes, :year, :rating, :improve_notes)
     end
 
 end

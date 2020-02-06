@@ -21,7 +21,7 @@ class Api::V1::TvshowsController < ApplicationController
 
     private
     def tvshow_params
-        params.require(:tvshow).permit(:id, :name, :season, :notes, :month_day_watched, :year_watched, :year, :image, :rating)
+        params.require(:tvshow).permit(:id, :name, :season, :notes, :month_day_watched, :year_watched, :year, :image, :rating, :improve_notes)
     end
 
 end
