@@ -17,6 +17,11 @@ class Api::V1::BooksController < ApplicationController
         book.update_attributes(book_params)
         render json: book
     end
+
+    def show
+        book = Book.find(params[:id])
+        render json: book  
+    end
     
     private
     

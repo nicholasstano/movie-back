@@ -15,6 +15,11 @@ class Api::V1::TvshowsController < ApplicationController
         render json: tvshow
     end
 
+    def show
+        tvshow = Tvshow.find(params[:id])
+        render json: tvshow  
+    end
+
     def destroy
         Tvshow.destroy(params[:id])    
     end

@@ -18,6 +18,11 @@ class Api::V1::BoardsController < ApplicationController
         board.update_attributes(board_params)
         render json: board
     end
+
+    def show
+        board = Board.find(params[:id])
+        render json: board  
+    end
     
     private
     

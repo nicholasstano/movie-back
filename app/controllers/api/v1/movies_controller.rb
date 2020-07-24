@@ -17,6 +17,11 @@ class Api::V1::MoviesController < ApplicationController
         movie.update_attributes(movie_params)
         render json: movie
     end
+
+    def show
+        movie = Movie.find(params[:id])
+        render json: movie  
+    end
     
     private
     
