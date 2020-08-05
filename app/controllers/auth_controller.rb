@@ -7,4 +7,9 @@ class AuthController < ApplicationController
             render json: {errors: "invalid username"}
         end
     end
+
+    def autologin
+        user = User.find(user_id)
+        render json: user
+    end
 end
