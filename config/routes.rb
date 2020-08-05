@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   end 
   root to: 'home#index'
   post '/login', to: 'auth#login'
-  post '/autologin', to: 'auth#autologin'
+  get '/autologin', to: 'auth#autologin'
 end

@@ -10,6 +10,7 @@ class AuthController < ApplicationController
 
     def autologin
         user = User.find(user_id)
-        render json: {user: user}
+        render json: user
     end
 end
+ 
